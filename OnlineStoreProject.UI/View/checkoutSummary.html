@@ -1,0 +1,52 @@
+﻿
+<h2>Your cart</h2>
+<div ng-controller="cartSummaryController">
+    <div class="alert alert-warning" ng-show="cartData.length == 0">
+        There are no products in your shopping cart.
+        <a href="#/products" class="alert-link">Click here to return to the catalogue</a>
+    </div>
+    <div id="printable" ng-hide="cartData.length == 0">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Item</th>
+                    <th class="text-right">Price</th>
+                    <th class="text-right">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in cartData">
+                    <td class="text-center"><input ng-true-value="1" ng-model="item.count" /> </td>
+                    <td class="text-left">{{item.ProductName}}</td>
+                    <td class="text-right"> {{item.UnitPrice}}</td>
+                    <td class="text-right">{{ (item.UnitPrice * item.count)}}</td>
+                    <td>
+                        <button ng-click="remove(item.ProductID)"
+                                class="btn btn-sm btn-warning">
+                            Remove
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Total:</td>
+                    <td class="text-right">
+                        {{total()}}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <div><button ng-click="printDiv('printable');">Print Div</button></div>
+        <div class="text-center">
+            <a class="btn btn-primary" href="#/products">Continue shopping</a>
+            <a class="btn btn-primary" href="#/placeorder">Place order now</a>
+
+
+
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" ng-click="totalcart()">Totalcart</button>
+</div>

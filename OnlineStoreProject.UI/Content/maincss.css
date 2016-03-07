@@ -1,0 +1,214 @@
+﻿@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+  }
+  .sidebar-nav .navbar ul:hover {
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+.prolist {
+
+}
+.prolist:hover {
+    -webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	color:#fff;
+}
+/* SlideShow*/
+.carousel-inner .active.left { left: -33%; }
+.carousel-inner .next        { left:  33%; }
+.carousel-inner .prev        { left: -33%; }
+.carousel-control.left,.carousel-control.right {background-image:none;}
+
+.test + .tooltip.top > .tooltip-arrow {
+    border-top: 5px solid red;
+}
+.box2{
+	background:url(../Content/images/feature.jpg)no-repeat;
+	min-height:100px;
+}
+.box3{
+	background:url(../Content/images/feature1.jpg)no-repeat;
+	min-height:100px;
+}
+.box4{
+	background:url(../Content/images/feature2.jpg)no-repeat;
+	min-height:100px;
+}
+.box5{
+	background:url(../Content/images/feature3.jpg)no-repeat;
+	min-height:100px;
+}
+ul.list1{
+	padding:0;
+	list-style:none;
+	margin:0;
+}
+ul.list1 li.list1_right{
+	overflow:hidden;
+	text-align: left;
+}
+ul.list1 li.list1_right p{
+	font: 500 16px/16px 'Raleway', sans-serif;
+	color: #fff;
+	margin-top: 23px;
+	line-height: 1.5em;
+}
+i.clock1,i.vehicle,i.dollar,i.lock{
+	width: 80px;
+	height: 94px;
+	background: url(../Content/images/img-sprite.png)no-repeat;
+	float: left;
+}
+i.lock{
+	background-position:-109px 6px;
+}
+i.clock1{
+	background-position:-198px 9px;
+}
+i.vehicle{
+	background-position:-293px 12px;
+}
+i.dollar{
+	background-position:-380px 12px;
+}
+.column_center{
+	text-align: center;
+	border-bottom: 3px dotted #ECECEC;
+	margin: 1em 0 2em;
+}
+.column_center h1{
+	color:#583d28;
+	font:600 40px/40px 'Raleway', sans-serif;
+	text-transform:uppercase;
+}
+.column_center h2{
+	color:#583d28;
+	font:500 16px/30px 'Raleway', sans-serif;
+}
+ul.sellers{
+	padding:10px;
+	list-style:none;
+	margin:0;
+	background:#f6eddc;
+	border:1px solid #E7E1D6;
+}
+i.star{
+	width: 30px;
+	height: 30px;
+	background: url(../Content/images/img-sprite.png)no-repeat -456px -18px;
+	float: left;
+	margin-right:1em;
+}
+ul.sellers li.sellers_desc{
+	overflow:hidden;
+}
+ul.sellers li.sellers_desc h2{
+	color: #583d28;
+	font: 700 30px/30px 'Raleway', sans-serif;
+	margin-bottom: 0;
+}
+.grid_2 {
+	padding: 2em 0 3em;
+}
+.box_inner{
+	position:relative;
+	border: 1px solid #E7DFD1;
+}
+.sale-box {
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	overflow: hidden;
+	height: 40px;
+	width: 59px;
+	background: url(../images/img-sprite.png) no-repeat -3px -109px;
+}
+.box_inner:hover .sale-box{
+	background: url(../images/img-sprite.png) no-repeat -3px -167px;
+}
+.desc{
+	border-top: 1px solid #cac0ae;
+	text-align:center;
+	padding:1em 0 0 0;
+}
+.control-box {
+    text-align: right;
+    width: 100%;
+    }
+   
+

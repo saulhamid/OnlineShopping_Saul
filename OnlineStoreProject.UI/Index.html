@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainapp">
+<head>
+    <title>Online Shopping Mall</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/maincss.css" rel="stylesheet" />
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/jquery-2.2.0.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/MyScript.js"></script>
+    <script src="Controller/main.js"></script>
+    <script src="Controller/ProductListCrlt.js"></script>
+    <script src="Controller/cart.js"></script>
+    <script src="Controller/checkoutControllers.js"></script>
+    <script src="Controller/LogIn.js"></script>
+    <script src="Controller/Customers.js"></script>
+    <script src="Controller/OrderSumit.js"></script>
+</head>
+<body ng-controller="productCrlt">
+    <div ng-controller="productListCtrl">
+        <header>
+            <nav class="navbar navbar-default navbar-static-top" >
+                <div class="container-fluid">
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right" ng-controller="authCtrl">
+                            <li><a href="#">Home </a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About us </a></li>
+                            <li class="dropdown" ng-show="login">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Login <span class="glyphicon glyphicon-log-in"></span></a>
+                                <div class="dropdown-menu">
+                                    <form id="formLogin" name="authForm" class="form container-fluid" novalidate>
+                                        <div class="form-group">
+                                            <label for="usr">Name:</label>
+                                            <input type="text" class="form-control" id="usr" ng-model="username" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="pwd">Password:</label>
+                                            <input type="password" class="form-control" id="pwd" ng-model="password" required>
+                                        </div>
+                                        <button id="btnLogin" class="btn btn-block btn-primary" ng-click="authenticate(username, password)"
+                                           ng-disabled="authForm.$invalid">
+                                            Login
+                                        </button>
+                                    </form>
+                                    <div class="container-fluid">
+                                        <br>
+                                        <a class="small" href="#">Forgot password?</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="dropdown" ng-hide="login">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    {{CustomerName}}
+                                    <div class="dropdown-menu">
+                                        <div>
+                                            <a href="#" ng-click="logout()" class="btn btn-primary">  LogOut</a>
+                                        </div>
+                                    </div>
+                                    </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <nav>
+        </nav>
+        <main>
+            <ng-view />
+        </main>
+        <footer>
+            <div style="height:50px;width:100%;" class="bg-info">
+            </div>
+            <p> </p>
+        </footer>
+    </div>
+    <div>
+    </div>
+</body>
+</html>

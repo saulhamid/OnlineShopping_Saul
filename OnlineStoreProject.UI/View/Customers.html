@@ -1,0 +1,65 @@
+﻿
+<div ng-controller="customerCtrl">
+
+
+    <fieldset>
+
+        <table style="width:70%;">
+
+
+            <tr>
+                <td><label class="control-label">Name</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtName" ng-model="current.CustomerName" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Address</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtAddress" ng-model="current.CustomerAddress" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Mobile</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtphone" ng-model="current.CustomerMobile" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">City</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtCity" ng-model="current.CustomerCity" />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Country</label></td>
+                <td>
+                    <input type="text" class="form-control" name="txtCountry" ng-model="current.CustomerCountry" />
+                </td>
+            </tr>
+
+            <tr>
+                <td><label class="control-label">Mail</label></td>
+                <td>
+                    <input type="email" class="form-control" name="txtMail" ng-model="current.CustomerEmail" required />
+                </td>
+            </tr>
+            <tr>
+                <td><label class="control-label">Password</label></td>
+                <td>
+                    <input type="password" class="form-control" name="txtPassword" ng-model="current.CustomerPassword" required />
+                </td>
+            </tr>
+            <tr>
+
+                <td colspan="2">
+
+                    <button class="btn btn-primary" ng-click="insert()">Submit</button>
+
+                    <button class="btn btn-primary" ng-show="isEdit" ng-disabled="empfrm.$invalid" ng-click="update()">Update</button>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</div>
+
